@@ -131,7 +131,7 @@ Directely in html
 API
 ===
 
-``vueDataProxy({params})``
+``vueDataProxy(params)``
   ``params`` is an object. Each key represent a proxy definition (a resulting computed property). Each value should be an object with the following fields :
     - ``fetch`` : A function with no arguments, ``this`` representing the Vue local component instance. Should return the store object value.
     - ``commit`` : A function called at each modification (on the returned object from the computed property), taking the new value as parameter, and this representing the Vue local component.
