@@ -1,0 +1,36 @@
+{
+  "name": "vue-data-proxy",
+  "version": "0.0.9",
+  "description": "Easily create deep object proxy (mainly to map a Vuex nested sub-state to a computed property)",
+  "keywords": [
+    "Vue",
+    "Vuex",
+    "bind",
+    "binding",
+    "mapstate",
+    "proxy",
+    "data"
+  ],
+  "homepage": "https://github.com/hl037/vue-data-proxy",
+  "bugs": "https://github.com/hl037/vue-data-proxy/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Léo Flaventin Hauchecorne",
+    "email": "hl037.prog@gmail.com",
+    "url": "http://leo-flaventin.com"
+  },
+  "main": "dist/vue-data-proxy.umd.js",
+  "module": "dist/vue-data-proxy.esm.js",
+  "unpkg": "dist/vue-data-proxy.min.js",
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-data-proxy.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-data-proxy.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-data-proxy.min.js"
+  },
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-vue": "^3.0.0"
+  }
+}
