@@ -2,6 +2,7 @@ vue-data-proxy
 ===================
 
 This package provides ``vueDataProxy()`` to generate a two-way bindable computed property from the result of a user's ``fetch`` function (e.g. to retrieve the object from a Vuex store), that calls back a user's ``commit`` function on any change on the object, even deeply nested.
+Then, you get a very simple way of doing two-way bind with Vuex for use with ``v-model``
 
 Motivation
 ----------
@@ -31,19 +32,19 @@ There are already a wide variety of utilities to deal with two-way bindings with
          }
       }
 
-With the `official Vuex'<https://vuex.vuejs.org/guide/forms.html#two-way-computed-property>`_ recommended way, you would have to declare two computed property, one for ``name`` and one for ``category``, both calling the same mutation to update.
+With the `official Vuex' <https://vuex.vuejs.org/guide/forms.html#two-way-computed-property>`_ recommended way, you would have to declare two computed property, one for ``name`` and one for ``category``, both calling the same mutation to update.
 
-With `Vuex's mapState<https://vuex.vuejs.org/guide/state.html#the-mapstate-helper>`_, it would be less verbose, but you'd still have to define a method and both the computed properties.
+With `Vuex's mapState <https://vuex.vuejs.org/guide/state.html#the-mapstate-helper>`_, it would be less verbose, but you'd still have to define a method and both the computed properties.
 
-With `vuex-bound<https://github.com/Vanilla-IceCream/vuex-bound#readme>`_, it would be even shorter, but still need you to define each property one by one.
+With `vuex-bound <https://github.com/Vanilla-IceCream/vuex-bound#readme>`_, it would be even shorter, but still need you to define each property one by one.
 
-`vuex-dot<https://github.com/yarsky-tgz/vuex-dot#readme>`_ introduces an interresting way to do what the previous one does using a dot-synthax. However, it still does not handle the nested case.
+`vuex-dot <https://github.com/yarsky-tgz/vuex-dot#readme>`_ introduces an interresting way to do what the previous one does using a dot-synthax. However, it still does not handle the nested case.
 
 
 Contribution
 ------------
 
-This package addresses the problem of deep nested two-way binding by providing a function that generate a two-way bound computed property definition. Considering the previous example, you would simply wirte the following (let's suppose you write a .vue component :)
+This package addresses the problem of deep nested two-way binding by providing a function that generate a two-way bound computed property definition. Considering the previous example, you would simply write the following (let's suppose you write a .vue component) :
 
 .. code:: xml
 
@@ -69,6 +70,8 @@ This package addresses the problem of deep nested two-way binding by providing a
         userId : Number,
       },
     },
+
+ On non-object proxied data, this generate a code equivalent to a simple two-way bound computed property.
 
 Limitations
 -----------
