@@ -90,7 +90,7 @@ export default function vueDataProxy(maps) {
         inject(obj, commit.call(this, p.commit,obj));
         return obj;
       },
-      set(oldVal, val) {
+      set(val) {
         p.commit.call(this, val);
       }
     }
