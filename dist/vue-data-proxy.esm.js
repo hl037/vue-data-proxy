@@ -94,7 +94,7 @@ function vueDataProxy(maps) {
         return obj;
       },
       set: function set(oldVal, val) {
-        p.commit(val);
+        p.commit.call(this, val);
       }
     };
   });
