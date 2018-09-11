@@ -2,7 +2,7 @@ vue-data-proxy
 ===================
 
 This package provides ``vueDataProxy()`` to generate a two-way bindable computed property from the result of a user's ``fetch`` function (e.g. to retrieve the object from a Vuex store), that calls back a user's ``commit`` function on any change on the object, even deeply nested.
-Then, you get a very simple way of doing two-way bind with Vuex for use with ``v-model``
+Then, you get a very simple way of doing two-way binding with Vuex for use with ``v-model``
 
 Motivation
 ----------
@@ -71,7 +71,7 @@ This package addresses the problem of deep nested two-way binding by providing a
       },
     },
 
- On non-object proxied data, this generate a code equivalent to a simple two-way bound computed property.
+On non-object proxied data, this generate a code equivalent to a simple two-way bound computed property.
 
 Limitations
 -----------
@@ -135,7 +135,7 @@ API
 ===
 
 ``vueDataProxy(params)``
-  ``params`` is an object. Each key represent a proxy definition (a resulting computed property). Each value should be an object with the following fields :
+  ``params`` is an object. Each key represents a proxy definition (a resulting computed property), and each associated value should be an object with the following fields :
     - ``fetch`` : A function with no arguments, ``this`` representing the Vue local component instance. Should return the store object value.
     - ``commit`` : A function called at each modification (on the returned object from the computed property), taking the new value as parameter, and this representing the Vue local component.
 

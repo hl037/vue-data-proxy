@@ -91,7 +91,7 @@ export default function vueDataProxy(maps) {
         return obj;
       },
       set(oldVal, val) {
-        p.commit(val);
+        p.commit.call(this, val);
       }
     }
   });
