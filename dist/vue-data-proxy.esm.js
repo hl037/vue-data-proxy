@@ -1,4 +1,7 @@
 function clone(obj){
+  if(obj === undefined) {
+    return obj
+  }
   return JSON.parse(JSON.stringify(obj));
 }
 
@@ -93,7 +96,7 @@ function vueDataProxy(maps) {
         inject(obj, commit.call(this, p.commit,obj));
         return obj;
       },
-      set: function set(oldVal, val) {
+      set: function set(val) {
         p.commit.call(this, val);
       }
     };
