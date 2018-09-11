@@ -1,6 +1,6 @@
 {
   "name": "vue-data-proxy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easily create deep object proxy (mainly to map a Vuex nested sub-state to a computed property)",
   "keywords": [
     "Vue",
@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "rollup": "^0.57.1",
-    "rollup-plugin-buble": "^0.19.2",
-    "rollup-plugin-vue": "^3.0.0"
+    "rollup-plugin-buble": "^0.19.2"
   }
 }
